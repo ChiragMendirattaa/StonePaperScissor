@@ -20,11 +20,11 @@ public class StonePaperScissor {
 
             if (userChoice < 0 || userChoice > 2) {
                 System.out.println("Invalid choice! Please enter 0, 1, or 2.");
-                round--; // Repeat the same round
+                round--;
                 continue;
             }
 
-            int computerChoice = random.nextInt(3); // Randomly generate 0, 1, or 2
+            int computerChoice = random.nextInt(3);
 
             System.out.println("Computer chose: " + getChoiceName(computerChoice));
             System.out.println("You chose: " + getChoiceName(userChoice));
@@ -43,7 +43,6 @@ public class StonePaperScissor {
 
             System.out.println("Score: You " + userWins + " - " + computerWins + " Computer");
 
-            // Check if a player has already won 3 rounds
             if (userWins >= 3 || computerWins >= 3) {
                 break;
             }
@@ -61,7 +60,6 @@ public class StonePaperScissor {
         scanner.close();
     }
 
-    // Helper method to convert choice number to name
     public static String getChoiceName(int choice) {
         switch (choice) {
             case 0:
@@ -75,7 +73,6 @@ public class StonePaperScissor {
         }
     }
 
-    // Helper method to determine the winner of a round
     public static int determineWinner(int userChoice, int computerChoice) {
         if (userChoice == computerChoice) {
             return 0; // Tie
