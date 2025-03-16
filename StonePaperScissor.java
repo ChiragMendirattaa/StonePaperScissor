@@ -75,7 +75,7 @@ public class StonePaperScissor {
 
     public static int determineWinner(int userChoice, int computerChoice) {
         if (userChoice == computerChoice) {
-            return 0; // Tie
+            return 0; 
         }
 
         switch (userChoice) {
@@ -86,7 +86,7 @@ public class StonePaperScissor {
             case 2: // Scissor
                 return (computerChoice == 1) ? 1 : -1; // Scissor > Paper
             default:
-                return 0; // Invalid
+                return 0; 
         }
     }
 }
